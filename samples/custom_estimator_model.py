@@ -17,7 +17,7 @@ def model(features, labels, mode, params):
                      tf.assign_add(global_step, 1))
     # ModelFnOps connects subgraphs we built to the
     # appropriate functionality.
-    return tf.contrib.learn.estimators.model_fn.ModelFnOps(
+    return tf.contrib.learn.ModelFnOps(
         mode=mode, predictions=y,
         loss= loss,
         train_op=train)

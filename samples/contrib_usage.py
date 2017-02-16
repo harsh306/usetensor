@@ -27,4 +27,5 @@ estimator.fit(x=dataSet.data, y=dataSet.target, steps=1000)
 
 # Here we evaluate how well our model did. In a real example, we would want
 # to use a separate validation and testing data set to avoid overfitting.
-estimator.evaluate(x=dataSet.data, y=dataSet.target)
+k = estimator.evaluate(x=dataSet.data, y=dataSet.target)
+print(k)
